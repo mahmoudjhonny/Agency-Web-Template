@@ -1,5 +1,6 @@
 :root {
   --main-color: #10cab7;
+  --secondary-color: #2c4755;
 }
 
 * {
@@ -10,6 +11,30 @@
 
 body {
   font-family: "Work Sans", sans-serif;
+}
+
+.specialHeading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.specialHeading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+
+@media (max-width: 767px) {
+  .specialHeading {
+    font-size: 60px;
+  }
+  .specialHeading + p {
+    margin-top: -20px;
+  }
 }
 
 .container {
@@ -186,4 +211,71 @@ body {
   line-height: 1.8;
   color: #777;
   font-size: 17px;
+}
+
+.services {
+  padding: 60px 0;
+}
+
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .srv i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+
+.services .services-content .srv .text {
+  flex: 1;
+}
+
+.services .services-content .srv .text h3 {
+  margin: 0 0 20px;
+}
+
+.services .services-content .srv .text p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.services .services-content .image {
+  text-align: center;
+  position: relative;
+}
+
+.services .services-content .image img {
+  width: 260px;
+}
+
+.services .services-content .image::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+  z-index: -1;
+}
+
+@media (max-width: 1199px) {
+  .services .services-content .img {
+    display: none;
+  }
 }
