@@ -5,6 +5,6 @@
 ## About project:
 ### Simple Landing page website for startup company 
 
-## Technolegy using in this is project:
+## Technology using in this is project:
 ### HTML5
 ### CSS3
